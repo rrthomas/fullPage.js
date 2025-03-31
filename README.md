@@ -2,6 +2,8 @@
 ![preview](https://raw.github.com/alvarotrigo/fullPage.js/master/examples/imgs/intro.png)
 ![compatibility](https://raw.github.com/alvarotrigo/fullPage.js/master/examples/imgs/compatible.png)
 
+**This is a friendly fork that removes the watermark for those using fullPage.js under the GPL. You still need to disable the credits in the settings to remove the watermark.**
+
 <p align="center">
   <span>English</span> |
   <a href="https://github.com/alvarotrigo/fullPage.js/tree/master/lang/spanish#fullpagejs">Español</a> |
