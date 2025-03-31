@@ -21,7 +21,7 @@ function init(){
         </div>
     `;
     const lastSection = getLast(state.sections);
-    const shouldUseWaterMark =  !state.isValid || getOptions().credits.enabled;
+    const shouldUseWaterMark = getOptions().credits.enabled;
 
     if(lastSection && lastSection.item && shouldUseWaterMark){
         lastSection.item.insertAdjacentHTML('beforeend', waterMark);
