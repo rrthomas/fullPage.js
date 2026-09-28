@@ -19,8 +19,8 @@ export function displayWarnings(){
     var msgStyle = 'font-size: 15px;background:yellow;';
 
     if(getOptions().licenseKey.trim() === ''){
-        utils.showError('error', 'Fullpage.js requires a `licenseKey` option. Read about it on the following website:');
-        utils.showError('error', 'https://alvarotrigo.com/fullPage/docs/#licensekey');
+        // utils.showError('error', 'Fullpage.js requires a `licenseKey` option. Read about it on the following website:');
+        // utils.showError('error', 'https://alvarotrigo.com/fullPage/docs/#licensekey');
     }
     else if(!isOK()){
         utils.showError('error', 'Incorrect `licenseKey`. Get one for fullPage.js version 4 here:');
