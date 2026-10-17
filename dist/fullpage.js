@@ -5328,8 +5328,6 @@
       windowRemoveEvent('scroll', scrollHandler);
     }
     function bindEvents$1() {
-      windowAddEvent('scroll', scrollHandler);
-      doc.body.addEventListener('scroll', scrollHandler);
       EventEmitter.on(events.onScrollPageAndSlide, function (params) {
         scrollPageAndSlide(params.sectionAnchor, params.slideAnchor);
       });
@@ -5638,6 +5636,8 @@
     * Scrolls to the anchor in the URL when loading the site
     */
     function scrollToAnchor() {
+      windowAddEvent('scroll', scrollHandler);
+      doc.body.addEventListener('scroll', scrollHandler);
       var anchors = getAnchorsURL();
       var sectionAnchor = anchors.section;
       var slideAnchor = anchors.slide;
@@ -5768,7 +5768,7 @@
       if (document.readyState !== 'loading') {
         scrollToAnchor();
       } else {
-        document.addEventListener('DOMContentLoaded', scrollToAnchor);
+        window.addEventListener('load', scrollToAnchor);
       }
       afterRenderActions();
 

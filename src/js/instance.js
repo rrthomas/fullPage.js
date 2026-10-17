@@ -38,7 +38,7 @@ export function init(){
         scrollToAnchor();
     } 
     else{
-        document.addEventListener('DOMContentLoaded', scrollToAnchor);
+        window.addEventListener('load', scrollToAnchor);
     }
 
     afterRenderActions();
