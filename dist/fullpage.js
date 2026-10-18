@@ -5821,9 +5821,14 @@
         getOptions().continuousVertical = false;
         showError('warn', 'Option `loopTop/loopBottom` is mutually exclusive with `continuousVertical`; `continuousVertical` disabled');
       }
-      if (getOptions().scrollOverflow && (getOptions().scrollBar || !getOptions().autoScrolling)) {
-        showError('warn', 'Options scrollBar:true and autoScrolling:false are mutually exclusive with scrollOverflow:true. Sections with scrollOverflow might not work well in Firefox');
-      }
+
+      // RRT: I set scrollBar: true and scrollOverflow: false to avoid layout
+      // problems in non-responsive mode.
+      // if(getOptions().scrollOverflow &&
+      //     (getOptions().scrollBar || !getOptions().autoScrolling)){
+      //     utils.showError('warn', 'Options scrollBar:true and autoScrolling:false are mutually exclusive with scrollOverflow:true. Sections with scrollOverflow might not work well in Firefox');
+      // }
+
       if (getOptions().continuousVertical && (getOptions().scrollBar || !getOptions().autoScrolling)) {
         getOptions().continuousVertical = false;
         showError('warn', 'Scroll bars (`scrollBar:true` or `autoScrolling:false`) are mutually exclusive with `continuousVertical`; `continuousVertical` disabled');
